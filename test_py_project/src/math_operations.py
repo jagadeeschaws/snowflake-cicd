@@ -13,5 +13,5 @@ def divide(a, b):
     return a / b
 
 def db_connection():
-    password = "SuperSecret123"  # This will be flagged
+    password = "SuperSecret1234"  # This will be flagged
 
