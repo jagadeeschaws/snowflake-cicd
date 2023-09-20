@@ -12,3 +12,6 @@ def divide(a, b):
         raise ValueError("Cannot divide by zero!")
     return a / b
 
+def db_connection():
+    password = "SuperSecret123"  # This will be flagged
+
