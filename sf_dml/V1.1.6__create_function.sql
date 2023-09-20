@@ -1,3 +1,11 @@
 use schema demo;
 
-CREATE OR REPLACE FUNCTION String_Concat(Firstname varchar(100),Lastname varchar(100)) returns VARCHAR as $$ SELECT ‘@@’||Firstname||’ ‘||Lastname||’@@’ FROM DUAL $$;
+CREATE FUNCTION simple_table_function ()
+  RETURNS TABLE (x INTEGER, y INTEGER)
+  AS
+  $$
+    SELECT 1, 2
+    UNION ALL
+    SELECT 3, 4
+  $$
+  ;
