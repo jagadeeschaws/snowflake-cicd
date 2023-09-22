@@ -1,11 +1,10 @@
 use schema demo;
 
-CREATE FUNCTION simple_table_function ()
-  RETURNS TABLE (x INTEGER, y INTEGER)
-  AS
-  $$
+create function simple_table_function()
+returns table (x INTEGER, y INTEGER)
+as
+$$
     SELECT 1, 2
     UNION ALL
     SELECT 3, 4
-  $$
-  ;
+  $$;
